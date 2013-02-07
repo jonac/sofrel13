@@ -33,4 +33,9 @@ public class Main {
 			arr[k] = temp;
 		}
 	}
+	
+	boolean membership(int[] arr, int key)
+	{
+		return false;	
+	}
 }
