@@ -14,9 +14,9 @@ public class Main
 		int k;
 		for (int i = 0; i < arr.length; i++)
 		{
-			k = 0;
+			k = i;
 			min = arr[i];
-			for (int j = 0; j < arr.length; j++)
+			for (int j = i; j < arr.length; j++)
 			{
 				if(arr[j] < min )
 				{
