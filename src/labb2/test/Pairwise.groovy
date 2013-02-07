@@ -1,6 +1,7 @@
 package labb2.test;
 
 import static org.junit.Assert.*
+import groovy.transform.Canonical
 import labb2.Main
 
 import org.junit.Before
@@ -9,7 +10,7 @@ import org.junit.Test
 class Pairwise
 {
 	
-	
+	@Canonical
 	class Pair
 	{
 		int x, y
@@ -30,10 +31,10 @@ class Pairwise
 	
 	void generatePairs()
 	{
-		N.times
+		(0..(N-2)).each
 		{
 			i ->
-			((i+1)..N).each
+			((i+1)..(N-1)).each
 			{
 				j ->
 					println "$i, $j"
@@ -47,9 +48,9 @@ class Pairwise
 		int[] arr = N .. 1
 		
 		// Choose a value from the possible set.
-		// Random ints in our case
-		arr[x] = r.nextInt()%1000;
-		arr[y] = r.nextInt()%1000;
+		// Random ints in the range 0..99 in our case
+		arr[x] = r.nextInt()%100;
+		arr[y] = r.nextInt()%100;
 	}
 	
 	@Test void "Test pairs in array"()
@@ -63,6 +64,17 @@ class Pairwise
 				int[] arr = generateArray(p.x, p.y)
 				assert arr.contains(k) == m.membership(arr, k)
 			}
+		}
+	}
+	
+	@Test void "Test key with entry in array"()
+	{
+		N.times {
+			int i ->
+				int[] arr = 17 .. 1
+				int k = r.nextInt()%100
+				arr[i] = r.nextInt()%100
+				
 		}
 	}
 	
