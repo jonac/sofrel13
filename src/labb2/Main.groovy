@@ -36,6 +36,7 @@ public class Main {
 	
 	boolean membership(int[] arr, int key)
 	{
-		return false;	
+		sorting arr
+		binarySearch arr, key	
 	}
 }
