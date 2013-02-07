@@ -3,9 +3,11 @@ package labb2.test;
 import static org.junit.Assert.*
 
 import org.junit.Before
+import org.junit.Test
 
 class Pairwise
 {
+	
 	int[] defaultArray
 	int defaultKey
 	
@@ -14,4 +16,6 @@ class Pairwise
 		defaultArray = 17 .. 1
 		defaultKey = 3
 	}
+	
+	
 }
