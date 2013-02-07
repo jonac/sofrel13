@@ -4,10 +4,11 @@ public class Main {
 
 	public int binarySearch(int[] arr, int key) {
 		int l,r,index;
-		l = 1; r=arr.length;
+		l = 0; r=arr.length-1;
+		//println ([arr:arr, key:key])
 		while (key!=arr[index] && l<=r){
 			index = (l+r)/2;
-			//println("index : $index value ${arr[index]} left: $l right: $r")
+			//println ([index : index, value: arr[index], left:l, right: r])
 			if(key < arr[index]) r=index-1;
 			else l = index+1;
 		}
@@ -37,6 +38,6 @@ public class Main {
 	boolean membership(int[] arr, int key)
 	{
 		sorting arr
-		binarySearch arr, key	
+		binarySearch(arr, key) != -1	
 	}
 }
