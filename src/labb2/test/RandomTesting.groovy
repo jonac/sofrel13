@@ -13,18 +13,23 @@ class RandomTesting
 	private static final int N = 10000
 
 	
+	private int generateKey()
+	{
+		r.nextInt()%100
+	}
+	
 	private int[] generateList()
 	{
 		def arr = []
 		SIZE.times {
-			arr << r.nextInt()
+			arr << r.nextInt() % 100
 		}
 		return arr
 	}
 	
 	@Test void "One random list"()
 	{
-		int k = r.nextInt()
+		int k = generateKey()
 		int[] arr = generateList()
 		assert arr.contains(k) == m.membership(arr, k)
 	}
@@ -32,7 +37,7 @@ class RandomTesting
 	@Test void "Ten random lists"()
 	{
 		10.times {
-			int k = r.nextInt()
+			int k = generateKey()
 			int[] arr = generateList()
 			assert arr.contains(k) == m.membership(arr, k)
 		}
@@ -42,7 +47,7 @@ class RandomTesting
 	{
 		N.times
 		{
-			int k = r.nextInt()
+			int k = generateKey()
 			int[] arr = generateList()
 			assert arr.contains(k) == m.membership(arr, k)
 		}
