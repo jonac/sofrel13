@@ -1,6 +1,6 @@
 package labb2.main;
 
-public interface Membership_interface {
+public interface Labb2 {
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||

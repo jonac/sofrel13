@@ -1,7 +1,7 @@
 package labb2.test.mutations.one;
 
 import static org.junit.Assert.*
-import labb2.main.Membership_interface
+import labb2.main.Labb2
 import labb2.main.mutations.Membership_mutation1;
 
 import org.junit.Test
@@ -9,7 +9,7 @@ import org.junit.Test
 class RandomTesting
 {
 	Random r = new Random()
-	Membership_interface m = new Membership_mutation1()
+	Labb2 m = new Membership_mutation1()
 	private static final int SIZE = 17
 	private static final int N = 10000
 

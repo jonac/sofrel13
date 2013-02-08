@@ -18,7 +18,7 @@ mutations = [
 	
 mutations.each
 {
-	Membership_interface i ->
+	Labb2 i ->
 		try
 		{
 			println i.membership(1..17 as int[], 6)

@@ -1,6 +1,6 @@
 package labb2.main;
 
-public class Membership implements Membership_interface {
+public class Membership implements Labb2 {
 
 
 	/*@

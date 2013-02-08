@@ -1,8 +1,8 @@
 package labb2.main.mutations;
 
-import labb2.main.Membership_interface;
+import labb2.main.Labb2;
 
-public class Membership_mutation3 implements Membership_interface{
+public class Membership_mutation3 implements Labb2{
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
