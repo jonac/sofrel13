@@ -2,7 +2,7 @@ package labb2.test;
 
 import static org.junit.Assert.*
 import groovy.transform.Canonical
-import labb2.Main
+import labb2.Membership
 import static Math.abs
 
 import org.junit.Before
@@ -21,7 +21,7 @@ class Pairwise
 	final int defaultKey = 3
 	List<Pair> pairs = []
 	
-	Main m = new Main()
+	Membership m = new Membership()
 	Random r = new Random()
 	
 	@Before void setup()

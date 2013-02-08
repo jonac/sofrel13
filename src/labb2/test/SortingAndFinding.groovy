@@ -1,7 +1,7 @@
 package labb2.test;
 
 import static org.junit.Assert.*
-import labb2.Main
+import labb2.Membership
 
 import org.junit.Before
 import org.junit.Test
@@ -9,12 +9,12 @@ import org.junit.Test
 class SortingAndFinding
 {
 	int[] arr
-	Main m
+	Membership m
 	
 	@Before void setup()
 	{
 		arr = [5, 4, 3, 2, 1]
-		m = new Main()
+		m = new Membership()
 	}
 	
 	@Test void "sort and find test"()

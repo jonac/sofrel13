@@ -1,14 +1,14 @@
 package labb2.test;
 
 import static org.junit.Assert.*
-import labb2.Main
+import labb2.Membership
 
 import org.junit.Test
 
 class RandomTesting
 {
 	Random r = new Random()
-	Main m = new Main()
+	Membership m = new Membership()
 	private static final int SIZE = 17
 	private static final int N = 10000
 

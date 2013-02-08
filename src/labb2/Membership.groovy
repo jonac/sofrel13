@@ -1,8 +1,8 @@
 package labb2;
 
-public class Main {
+public class Membership implements Membership_interface {
 
-	
+
 	/*@
 	 * requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >= arr[i];);
 	 * ensures contains(arr, key) && arr[\result] == key 
@@ -44,7 +44,7 @@ public class Main {
 			arr[k] = temp;
 		}
 	}
-	
+
 	/*@
 	 *	requires true;
 	 *  ensures contains(arr, key) && \result == true
@@ -53,6 +53,6 @@ public class Main {
 	boolean membership(int[] arr, int key)
 	{
 		sorting arr
-		binarySearch(arr, key) != -1	
+		binarySearch(arr, key) != -1
 	}
 }

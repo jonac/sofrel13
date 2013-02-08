@@ -1,7 +1,7 @@
 package labb2.test;
 
 import static org.junit.Assert.*
-import labb2.Main
+import labb2.Membership
 
 import org.junit.Before
 import org.junit.Test
@@ -9,12 +9,12 @@ import org.junit.Test
 class SortingTest
 {
 	int[] arr;
-	Main main;
+	Membership main;
 	
 	@Before void setupSort()
 	{
 		this.arr = [5, 4, 3, 2]
-		main = new Main()	
+		main = new Membership()	
 	}
 	
 	@Test void sortTest()
