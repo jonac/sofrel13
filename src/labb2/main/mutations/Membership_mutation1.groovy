@@ -14,6 +14,7 @@ public class Membership_mutation1 implements Membership_interface {
 		int l, r, index;
 		l = 1; // Mutated fault changed from 0 to 1
 		r = arr.length - 1;
+		index = (l + r) / 2;
 		// println ([arr:arr, key:key])
 		while (key != arr[index] && l <= r) {
 			index = (l + r) / 2;

@@ -11,6 +11,7 @@ public class Membership implements Membership_interface {
 	public int binarySearch(int[] arr, int key) {
 		int l,r,index;
 		l = 0; r=arr.length-1;
+		index = (l + r) / 2;
 		//println ([arr:arr, key:key])
 		while (key!=arr[index] && l<=r){
 			index = (l+r)/2;
