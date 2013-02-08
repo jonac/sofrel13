@@ -1,4 +1,4 @@
-package labb2;
+package labb2.main;
 
 public interface Membership_interface {
 	/*

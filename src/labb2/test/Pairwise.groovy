@@ -2,7 +2,7 @@ package labb2.test;
 
 import static org.junit.Assert.*
 import groovy.transform.Canonical
-import labb2.Membership
+import labb2.main.Membership;
 import static Math.abs
 
 import org.junit.Before

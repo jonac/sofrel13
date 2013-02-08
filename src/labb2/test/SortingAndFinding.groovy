@@ -1,7 +1,7 @@
 package labb2.test;
 
 import static org.junit.Assert.*
-import labb2.Membership
+import labb2.main.Membership;
 
 import org.junit.Before
 import org.junit.Test

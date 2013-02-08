@@ -1,4 +1,4 @@
-package labb2;
+package labb2.main;
 
 public class Membership implements Membership_interface {
 
