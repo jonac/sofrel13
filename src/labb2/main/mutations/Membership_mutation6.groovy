@@ -1,4 +1,6 @@
-package labb2.main;
+package labb2.main.mutations;
+
+import labb2.main.Membership_interface;
 
 public class Membership_mutation6 implements Membership_interface{
 	/*

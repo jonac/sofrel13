@@ -1,6 +1,8 @@
-package labb2.main;
+package labb2.main.mutations;
 
-public class Membership_mutation4 implements Membership_interface{
+import labb2.main.Membership_interface;
+
+public class Membership_mutation3 implements Membership_interface{
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
@@ -40,10 +42,10 @@ public class Membership_mutation4 implements Membership_interface{
 		for (int i = 0; i < arr.length; i++) {
 			k = i;
 			min = arr[i];
-			for (int j = i; j < arr.length; j++) {
+			for (int j = i; j > arr.length; j++) { // Mutated Fault
 				if (arr[j] < min) {
 					min = arr[j];
-					j = k; //Mutated Fault Switched j and k
+					k = j;
 				}
 			}
 			int temp = arr[i];

@@ -1,6 +1,8 @@
-package labb2.main;
+package labb2.main.mutations;
 
-public class Membership_mutation2 implements Membership_interface{
+import labb2.main.Membership_interface;
+
+public class Membership_mutation5 implements Membership_interface{
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
@@ -22,10 +24,10 @@ public class Membership_mutation2 implements Membership_interface{
 				l = index + 1;
 		}
 
-		if (key == arr[index-1]) // Mutated Fault added -1 to index
+		if (key == arr[index])
 			return index;
 		else
-			return -1;
+			return 0; // Mutation fault changed ret value to 0 instead of -1
 	}
 
 	/*
