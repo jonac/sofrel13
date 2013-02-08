@@ -15,7 +15,7 @@ class RandomTesting
 	
 	private int generateKey()
 	{
-		r.nextInt()%100
+		r.nextInt() % 100
 	}
 	
 	private int[] generateList()

@@ -3,6 +3,7 @@ package labb2.test;
 import static org.junit.Assert.*
 import groovy.transform.Canonical
 import labb2.Main
+import static Math.abs
 
 import org.junit.Before
 import org.junit.Test
@@ -17,7 +18,6 @@ class Pairwise
 	}
 	
 	final int N = 17
-	final int[] defaultArray = N .. 1
 	final int defaultKey = 3
 	List<Pair> pairs = []
 	
@@ -46,13 +46,23 @@ class Pairwise
 	
 	int[] generateArray(x, y)
 	{
-		int[] arr = N .. 1
+		int[] arr = generateDefaultArray()
 		
-		// Choose a value from the possible set.
+		// Choose a value from the possible set
 		// Random ints in the range 0..99 in our case
-		arr[x] = r.nextInt()%100;
-		arr[y] = r.nextInt()%100;
+		arr[x] = generateValue()
+		arr[y] = generateValue()
 		return arr
+	}
+	
+	int generateValue()
+	{
+		r.nextInt()%100
+	}
+	
+	int[] generateDefaultArray()
+	{
+		N .. 1
 	}
 	
 	@Test void "Test pairs in array"()
@@ -74,10 +84,23 @@ class Pairwise
 		N.times {
 			int i ->
 				int[] arr = 17 .. 1
-				int k = Math.abs(r.nextInt()%100)
-				arr[i] = Math.abs(r.nextInt()%100)
+				int k = abs(generateValue())
+				arr[i] = abs(generateValue())
 				assert arr.contains(k) == m.membership(arr, k)
 		}
 	}
+	
+	@Test void "Test valid key with entry in array"()
+	{
+		N.times
+		{
+			int i ->
+				int[] arr = generateDefaultArray()
+				int k = generateValue()
+				arr[i] = k
+				assert m.membership(arr, k)
+		}
+	}
+	
 	
 }
