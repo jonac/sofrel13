@@ -7,24 +7,22 @@ import labb2.main.mutations.Membership_mutation4
 import labb2.main.mutations.Membership_mutation5
 import labb2.main.mutations.Membership_mutation6
 
-public class Main {
-
-	ArrayList<Membership_interface> arr
-
-	public test(){
-		
-		arr = new ArrayList<Membership_interface>()
-		arr.add(new Membership_mutation1());
-		arr.add(new Membership_mutation2());
-		arr.add(new Membership_mutation3());
-		arr.add(new Membership_mutation4());
-		arr.add(new Membership_mutation5());
-		arr.add(new Membership_mutation6());
-		println(arr[1].membership([1,2,3,4,5,6,7], 1));
-	}
-
-	public static void main(String[] args){
-		Main m = new Main();
-		m.test();
-	}
+mutations = [
+		new Membership_mutation1(),
+		new Membership_mutation2(),
+		new Membership_mutation3(),
+		new Membership_mutation4(),
+		new Membership_mutation5(),
+		new Membership_mutation6()
+		];
+	
+mutations.each
+{
+	Membership_interface i ->
+		try
+		{
+			println i.membership(1..17 as int[], 6)
+		} catch(Exception e){
+			println e			
+		}	
 }
