@@ -1,16 +1,18 @@
-package labb2.main;
+package labb2.main.mutations;
 
-public class Membership_mutation3 implements Membership_interface{
+import labb2.main.Membership_interface;
+
+public class Membership_mutation1 implements Membership_interface {
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
 	 * !contains(arr, key) && \result == -1;
-	 *
+	 * 
 	 * @
 	 */
 	public int binarySearch(int[] arr, int key) {
 		int l, r, index;
-		l = 0;
+		l = 1; // Mutated fault changed from 0 to 1
 		r = arr.length - 1;
 		// println ([arr:arr, key:key])
 		while (key != arr[index] && l <= r) {
@@ -31,7 +33,7 @@ public class Membership_mutation3 implements Membership_interface{
 	/*
 	 * @ requires true; ensures (\forall int i; 0 < i && i < arr.length-1;
 	 * arr[i+1] >= arr[i];);
-	 *
+	 * 
 	 * @
 	 */
 	public void sorting(int[] arr) {
@@ -40,7 +42,7 @@ public class Membership_mutation3 implements Membership_interface{
 		for (int i = 0; i < arr.length; i++) {
 			k = i;
 			min = arr[i];
-			for (int j = i; j > arr.length; j++) { // Mutated Fault
+			for (int j = i; j < arr.length; j++) {
 				if (arr[j] < min) {
 					min = arr[j];
 					k = j;
@@ -55,7 +57,7 @@ public class Membership_mutation3 implements Membership_interface{
 	/*
 	 * @ requires true; ensures contains(arr, key) && \result == true ||
 	 * !contains(arr, key) && \result == false;
-	 *
+	 * 
 	 * @
 	 */
 	boolean membership(int[] arr, int key)
