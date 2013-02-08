@@ -55,7 +55,7 @@ class RandomTesting
 		{
 			int[] arr = generateList()
 			int k = arr[r.nextInt()%SIZE]
-			assert m.membership(arr, k) 
+			assert m.membership(arr, k)
 		}
 	}
 }
