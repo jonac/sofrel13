@@ -1,4 +1,4 @@
-package labb2.test;
+package labb2.test.mutations.zero;
 
 import static org.junit.Assert.*
 import groovy.transform.Canonical
