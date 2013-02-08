@@ -2,17 +2,17 @@ package labb2.main.mutations;
 
 import labb2.main.Labb2;
 
-public class Membership_mutation4 implements Labb2{
+public class Mutation1 implements Labb2 {
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
 	 * !contains(arr, key) && \result == -1;
-	 *
+	 * 
 	 * @
 	 */
 	public int search(int[] arr, int key) {
 		int l, r, index;
-		l = 0;
+		l = 1; // Mutated fault changed from 0 to 1
 		r = arr.length - 1;
 		index = (l + r) / 2;
 		// println ([arr:arr, key:key])
@@ -34,7 +34,7 @@ public class Membership_mutation4 implements Labb2{
 	/*
 	 * @ requires true; ensures (\forall int i; 0 < i && i < arr.length-1;
 	 * arr[i+1] >= arr[i];);
-	 *
+	 * 
 	 * @
 	 */
 	public void sort(int[] arr) {
@@ -46,7 +46,7 @@ public class Membership_mutation4 implements Labb2{
 			for (int j = i; j < arr.length; j++) {
 				if (arr[j] < min) {
 					min = arr[j];
-					j = k; //Mutated Fault Switched j and k
+					k = j;
 				}
 			}
 			int temp = arr[i];
@@ -58,7 +58,7 @@ public class Membership_mutation4 implements Labb2{
 	/*
 	 * @ requires true; ensures contains(arr, key) && \result == true ||
 	 * !contains(arr, key) && \result == false;
-	 *
+	 * 
 	 * @
 	 */
 	boolean contains(int[] arr, int key)

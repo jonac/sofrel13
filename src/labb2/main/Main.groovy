@@ -1,19 +1,19 @@
 package labb2.main;
 
-import labb2.main.mutations.Membership_mutation1
-import labb2.main.mutations.Membership_mutation2
-import labb2.main.mutations.Membership_mutation3
-import labb2.main.mutations.Membership_mutation4
-import labb2.main.mutations.Membership_mutation5
-import labb2.main.mutations.Membership_mutation6
+import labb2.main.mutations.Mutation1
+import labb2.main.mutations.Mutation2
+import labb2.main.mutations.Mutation3
+import labb2.main.mutations.Mutation4
+import labb2.main.mutations.Mutation5
+import labb2.main.mutations.Mutation6
 
 mutations = [
-		new Membership_mutation1(),
-		new Membership_mutation2(),
-		new Membership_mutation3(),
-		new Membership_mutation4(),
-		new Membership_mutation5(),
-		new Membership_mutation6()
+		new Mutation1(),
+		new Mutation2(),
+		new Mutation3(),
+		new Mutation4(),
+		new Mutation5(),
+		new Mutation6()
 		];
 	
 mutations.each

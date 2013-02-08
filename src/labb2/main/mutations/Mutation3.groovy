@@ -2,7 +2,7 @@ package labb2.main.mutations;
 
 import labb2.main.Labb2;
 
-public class Membership_mutation5 implements Labb2{
+public class Mutation3 implements Labb2{
 	/*
 	 * @ requires (\forall int i; 0 < i && i < arr.length-1; arr[i+1] >=
 	 * arr[i];); ensures contains(arr, key) && arr[\result] == key ||
@@ -28,7 +28,7 @@ public class Membership_mutation5 implements Labb2{
 		if (key == arr[index])
 			return index;
 		else
-			return 0; // Mutation fault changed ret value to 0 instead of -1
+			return -1;
 	}
 
 	/*
@@ -43,7 +43,7 @@ public class Membership_mutation5 implements Labb2{
 		for (int i = 0; i < arr.length; i++) {
 			k = i;
 			min = arr[i];
-			for (int j = i; j < arr.length; j++) {
+			for (int j = i; j > arr.length; j++) { // Mutated Fault
 				if (arr[j] < min) {
 					min = arr[j];
 					k = j;

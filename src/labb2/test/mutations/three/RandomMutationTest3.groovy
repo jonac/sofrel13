@@ -2,14 +2,14 @@ package labb2.test.mutations.three;
 
 import static org.junit.Assert.*
 import labb2.main.Labb2
-import labb2.main.mutations.Membership_mutation3;
+import labb2.main.mutations.Mutation3;
 
 import org.junit.Test
 
 class RandomTesting
 {
 	Random r = new Random()
-	Labb2 m = new Membership_mutation3()
+	Labb2 m = new Mutation3()
 	private static final int SIZE = 17
 	private static final int N = 10000
 

@@ -4,7 +4,7 @@ import static java.lang.Math.abs
 import static org.junit.Assert.*
 import groovy.transform.Canonical
 import labb2.main.Labb2
-import labb2.main.mutations.Membership_mutation6;
+import labb2.main.mutations.Mutation6;
 
 import org.junit.Before
 import org.junit.Test
@@ -22,7 +22,7 @@ class Pairwise
 	final int defaultKey = 3
 	List<Pair> pairs = []
 	
-	Labb2 m = new Membership_mutation6()
+	Labb2 m = new Mutation6()
 	Random r = new Random()
 	
 	@Before void setup()
