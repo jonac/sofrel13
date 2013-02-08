@@ -1,10 +1,18 @@
 package labb2.main;
 
+import labb2.main.mutations.Membership_mutation1
+import labb2.main.mutations.Membership_mutation2
+import labb2.main.mutations.Membership_mutation3
+import labb2.main.mutations.Membership_mutation4
+import labb2.main.mutations.Membership_mutation5
+import labb2.main.mutations.Membership_mutation6
+
 public class Main {
 
 	ArrayList<Membership_interface> arr
 
 	public test(){
+		
 		arr = new ArrayList<Membership_interface>()
 		arr.add(new Membership_mutation1());
 		arr.add(new Membership_mutation2());
