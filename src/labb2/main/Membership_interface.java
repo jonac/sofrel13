@@ -17,4 +17,12 @@ public interface Membership_interface {
 	 * @
 	 */
 	public void sorting(int[] arr);
+
+	/*
+	 * @ requires true; ensures contains(arr, key) && \result == true ||
+	 * !contains(arr, key) && \result == false;
+	 * 
+	 * @
+	 */
+	boolean membership(int[] arr, int key);
 }
