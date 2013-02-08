@@ -8,7 +8,7 @@ public interface Labb2 {
 	 * 
 	 * @
 	 */
-	public int binarySearch(int[] arr, int key);
+	public int search(int[] arr, int key);
 
 	/*
 	 * @ requires true; ensures (\forall int i; 0 < i && i < arr.length-1;
@@ -16,7 +16,7 @@ public interface Labb2 {
 	 * 
 	 * @
 	 */
-	public void sorting(int[] arr);
+	public void sort(int[] arr);
 
 	/*
 	 * @ requires true; ensures contains(arr, key) && \result == true ||
@@ -24,5 +24,5 @@ public interface Labb2 {
 	 * 
 	 * @
 	 */
-	boolean membership(int[] arr, int key);
+	boolean contains(int[] arr, int key);
 }

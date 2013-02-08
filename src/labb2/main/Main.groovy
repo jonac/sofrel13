@@ -21,10 +21,10 @@ mutations.each
 	Labb2 i ->
 		try
 		{
-			println i.membership(1..17 as int[], 6)
-			println i.membership(1..17 as int[], 1)
-			println i.membership(17..1 as int[], 3)
-			println i.membership(1..17 as int[], 1)
+			println i.contains(1..17 as int[], 6)
+			println i.contains(1..17 as int[], 1)
+			println i.contains(17..1 as int[], 3)
+			println i.contains(1..17 as int[], 1)
 		} catch(Exception e){
 			println e			
 		}	

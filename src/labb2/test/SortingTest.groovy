@@ -19,7 +19,7 @@ class SortingTest
 	
 	@Test void sortTest()
 	{
-		main.sorting(arr)
+		main.sort(arr)
 		println arr
 	}
 }

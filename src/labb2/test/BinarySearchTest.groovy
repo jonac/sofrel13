@@ -16,8 +16,8 @@ class BinarySearchTest {
 	}
 	
 	@Test void searchTest(){
-		assert(main.binarySearch(arr, 4) == 3);
-		assert(main.binarySearch(arr, 3) == -1);
+		assert(main.search(arr, 4) == 3);
+		assert(main.search(arr, 3) == -1);
 		
 	}
 }

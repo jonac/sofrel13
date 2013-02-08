@@ -31,7 +31,7 @@ class RandomTesting
 	{
 		int k = generateKey()
 		int[] arr = generateList()
-		assert arr.contains(k) == m.membership(arr, k)
+		assert arr.contains(k) == m.contains(arr, k)
 	}
 	
 	@Test void "Ten random lists"()
@@ -39,7 +39,7 @@ class RandomTesting
 		10.times {
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.membership(arr, k)
+			assert arr.contains(k) == m.contains(arr, k)
 		}
 	}
 	
@@ -49,13 +49,13 @@ class RandomTesting
 		{
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.membership(arr, k)
+			assert arr.contains(k) == m.contains(arr, k)
 		}
 		N.times
 		{
 			int[] arr = generateList()
 			int k = arr[r.nextInt()%SIZE]
-			assert m.membership(arr, k)
+			assert m.contains(arr, k)
 		}
 	}
 }

@@ -19,8 +19,8 @@ class SortingAndFinding
 	
 	@Test void "sort and find test"()
 	{
-		assert !m.membership(arr, 7)
-		assert m.membership(arr, 2)
+		assert !m.contains(arr, 7)
+		assert m.contains(arr, 2)
 		
 	}
 	

@@ -75,7 +75,7 @@ class Pairwise
 			N.times
 			{
 				int[] arr = generateArray(p.x, p.y)
-				assertEquals arr.contains(k), m.membership(arr, k)
+				assertEquals arr.contains(k), m.contains(arr, k)
 			}
 		}
 	}
@@ -87,7 +87,7 @@ class Pairwise
 				int[] arr = 17 .. 1
 				int k = abs(generateValue())
 				arr[i] = abs(generateValue())
-				assertEquals arr.contains(k), m.membership(arr, k)
+				assertEquals arr.contains(k), m.contains(arr, k)
 		}
 	}
 	
@@ -99,7 +99,7 @@ class Pairwise
 				int[] arr = generateDefaultArray()
 				int k = generateValue()
 				arr[i] = k
-				assert m.membership(arr, k)
+				assert m.contains(arr, k)
 		}
 	}
 	
