@@ -2,7 +2,7 @@ package labb2.test.mutations.four;
 
 import static org.junit.Assert.*
 import labb2.main.Labb2
-import labb2.main.mutations.Mutation4;
+import labb2.main.mutations.Mutation4
 
 import org.junit.Test
 
@@ -40,7 +40,7 @@ class RandomTesting
 		10.times {
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.contains(arr, k)
+			assert arr.contains(k) == m.contains(arr, k):"failed on iteration $it"
 		}
 	}
 	
@@ -50,13 +50,13 @@ class RandomTesting
 		{
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.contains(arr, k)
+			assert arr.contains(k) == m.contains(arr, k):"failed on iteration $it"
 		}
 		N.times
 		{
 			int[] arr = generateList()
 			int k = arr[r.nextInt()%SIZE]
-			assert m.contains(arr, k)
+			assert m.contains(arr, k):"failed on iteration $it"
 		}
 	}
 }

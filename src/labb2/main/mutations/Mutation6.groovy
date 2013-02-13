@@ -1,6 +1,6 @@
 package labb2.main.mutations;
 
-import labb2.main.Labb2;
+import labb2.main.Labb2
 
 public class Mutation6 implements Labb2{
 	/*
@@ -40,7 +40,7 @@ public class Mutation6 implements Labb2{
 	public void sort(int[] arr) {
 		int min;
 		int k;
-		for (int i = 0; i <= arr.length; i++) { // Mutation fault changed < to <=
+		for (int i = 0; i < arr.length; i++) {
 			k = i;
 			min = arr[i];
 			for (int j = i; j < arr.length; j++) {
@@ -50,8 +50,8 @@ public class Mutation6 implements Labb2{
 				}
 			}
 			int temp = arr[i];
-			arr[i] = min;
-			arr[k] = temp;
+			arr[k] = min;
+			arr[i] = temp;
 		}
 	}
 

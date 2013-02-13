@@ -4,7 +4,7 @@ import static java.lang.Math.abs
 import static org.junit.Assert.*
 import groovy.transform.Canonical
 import labb2.main.Labb2
-import labb2.main.mutations.Mutation4;
+import labb2.main.mutations.Mutation4
 
 import org.junit.Before
 import org.junit.Test
@@ -75,7 +75,7 @@ class Pairwise
 			N.times
 			{
 				int[] arr = generateArray(p.x, p.y)
-				assert arr.contains(k) == m.contains(arr, k)
+				assert arr.contains(k) == m.contains(arr, k):"failed on iteration $it"
 			}
 		}
 	}
@@ -87,7 +87,7 @@ class Pairwise
 				int[] arr = 17 .. 1
 				int k = abs(generateValue())
 				arr[i] = abs(generateValue())
-				assert arr.contains(k) == m.contains(arr, k)
+				assert arr.contains(k) == m.contains(arr, k):"failed on iteration $i"
 		}
 	}
 	
@@ -99,7 +99,7 @@ class Pairwise
 				int[] arr = generateDefaultArray()
 				int k = generateValue()
 				arr[i] = k
-				assert m.contains(arr, k)
+				assert m.contains(arr, k):"failed on iteration $i"
 		}
 	}
 	

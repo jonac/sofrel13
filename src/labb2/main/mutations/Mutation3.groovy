@@ -1,6 +1,6 @@
 package labb2.main.mutations;
 
-import labb2.main.Labb2;
+import labb2.main.Labb2
 
 public class Mutation3 implements Labb2{
 	/*
@@ -43,7 +43,7 @@ public class Mutation3 implements Labb2{
 		for (int i = 0; i < arr.length; i++) {
 			k = i;
 			min = arr[i];
-			for (int j = i; j > arr.length; j++) { // Mutated Fault
+			for (int j = i; j > arr.length; j++) { // Mutated fault changed less then to greater then
 				if (arr[j] < min) {
 					min = arr[j];
 					k = j;

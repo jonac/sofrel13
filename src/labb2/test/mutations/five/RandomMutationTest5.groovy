@@ -2,7 +2,7 @@ package labb2.test.mutations.five;
 
 import static org.junit.Assert.*
 import labb2.main.Labb2
-import labb2.main.mutations.Mutation5;
+import labb2.main.mutations.Mutation5
 
 import org.junit.Test
 
@@ -28,19 +28,12 @@ class RandomTesting
 		return arr
 	}
 	
-	@Test void "One random list"()
-	{
-		int k = generateKey()
-		int[] arr = generateList()
-		assert arr.contains(k) == m.contains(arr, k)
-	}
-	
 	@Test void "Ten random lists"()
 	{
 		10.times {
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.contains(arr, k)
+			assert arr.contains(k) == m.contains(arr, k):"failed on iteration $it"
 		}
 	}
 	
@@ -50,13 +43,13 @@ class RandomTesting
 		{
 			int k = generateKey()
 			int[] arr = generateList()
-			assert arr.contains(k) == m.contains(arr, k)
+			assert arr.contains(k) == m.contains(arr, k):"failed on iteration $it"
 		}
 		N.times
 		{
 			int[] arr = generateList()
 			int k = arr[r.nextInt()%SIZE]
-			assert m.contains(arr, k)
+			assert m.contains(arr, k):"failed on iteration $it"
 		}
 	}
 }
