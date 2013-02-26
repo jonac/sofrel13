@@ -8,6 +8,7 @@ ASSIGN
     init(state) := s1;
     init(Bit1) := FALSE;
     init(Bit2) := FALSE; -- variable "input" is uninitialized!
+
     next(state) := case
        state = s1 & input = TRUE : s2;
        state = s2 & input = FALSE : s3;
@@ -17,16 +18,10 @@ ASSIGN
        state = s4 & input = FALSE : s3;
        TRUE : state; -- why?
     esac;
-    next(Bit1) := case 
-      -- To do: fill in this definition
 
+    next(Bit1) := input;
 
-    esac;
-    next(Bit2) := case 
-     -- To do: fill in this definition
-
-
-    esac; -- can you optimize this? 
+    next(Bit2) :=  Bit1;
 
 LTLSPEC 
    G (Bit1 <-> X Bit2)
