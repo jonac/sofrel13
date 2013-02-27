@@ -29,3 +29,20 @@ LTLSPEC
 	G(velocity=stop & accelerate -> X velocity=slow)
 
 -- write down the remaining properties yourself
+LTLSPEC
+	G(velocity=slow & accelerate -> X !(velocity=fast))
+
+LTLSPEC
+	G(velocity=slow & !accelerate & !brake -> X !(velocity=stop))
+
+LTLSPEC
+	G(velocity=slow & brake -> X !(velocity=stop))
+
+LTLSPEC
+	G(velocity=fast & brake -> X !(velocity=stop))
+
+LTLSPEC
+	G(velocity=fast & !accelerate -> X !(velocity=slow))
+
+LTLSPEC
+	G(!(velocity=slow & X velocity =fast))
