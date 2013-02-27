@@ -28,12 +28,6 @@ LTLSPEC
 LTLSPEC 
 	G(velocity=stop & accelerate -> X velocity=slow)
 
-LTSPEC
-	G(brake -> X velocity=stop)
-
-LTSPEC
-	G(brake -> X velocity=stop)
-
 -- write down the remaining properties yourself
 LTLSPEC
 	G(velocity=slow & accelerate -> X !(velocity=fast))
